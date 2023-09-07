@@ -654,9 +654,88 @@
 
     <span id="contact"></span>
     <!-- contact section -->
-    <section class="w-full md:px-24 py-10">
+    <section class="relative w-full md:px-24 py-10">
+
       <div class="px-14 py-12 md:px-12 lg:py-24 lg:text-left">
         <h2 class="text-[1.5rem] font-bold text-blu underline underline-offset-[0.425rem] decoration-mostly-black decoration-4">Contact</h2>
+      </div>
+
+      <!-- Container -->
+      <div class="container mx-auto pb-10">
+        <div class="flex justify-center px-12">
+          <!-- Row -->
+          <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+            <!-- Col -->
+            <div class="w-full lg:w-8/12 p-5 rounded-lg lg:rounded-l-none">
+              <h3 class="pt-4 text-lg text-center font-semibold">Let&apos;s start <span class="text-blu underline underline-offset-2 decoration-2">working</span> together. Hit me up!</h3>
+              <form class="px-8 pt-6 pb-8 mb-4">
+                  <div class="mb-4">
+                    <label class="hidden mb-2 text-sm font-bold text-gray-700" for="name">
+                      Name
+                    </label>
+                    <input id="name" type="text" placeholder="Name" rows="4" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-mostly-black border shadow appearance-none focus:outline-none focus:shadow-outline"/>
+                  </div>
+                  <div class="mb-4">
+                    <label class="hidden mb-2 text-sm font-bold text-gray-700" for="email">
+                      Email
+                    </label>
+                    <input id="email" type="email" placeholder="Email" rows="4" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-mostly-black border shadow appearance-none focus:outline-none focus:shadow-outline">
+                  </div>
+                <div class="mb-4">
+                  <label class="hidden mb-2 text-sm font-bold text-gray-700" for="email">
+                    Message
+                  </label>
+                  <textarea id="message" type="text" placeholder="Message" rows="4" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border shadow appearance-none focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+
+                <div class="mb-6 text-center">
+                  <button class="w-full px-4 py-2 font-bold text-white !bg-blu hover:!bg-light-blu focus:outline-none focus:shadow-outline" type="button">
+                    Send Message
+                  </button>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-3 items-start justify-start lg:items-center lg:justify-center">
+
+                  <div class="text-center">
+                    <div class="flex flex-row items-center gap-2">
+                      <div>
+                        <i class="text-3xl fa-solid fa-mobile"></i>
+                      </div>
+                      <div class="flex flex-col text-left text-sm text-blu align-baseline">
+                        <p class="uppercase text-mostly-black font-semibold">Phone</p>
+                        <p>+63 917 424 0109</p>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <div class="text-center">
+                    <div class="flex flex-row items-center gap-2">
+                      <div>
+                        <i class="text-3xl fa-solid fa-envelope"></i>
+                      </div>
+                      <div class="flex flex-col text-left text-sm text-blu align-baseline">
+                        <p class="uppercase text-mostly-black font-semibold">Email</p>
+                        <p><a class="hover:underline underline-offset-2" href="mailto:benedictramirez78@gmail.com">benedictramirez78@gmail.com</a></p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Col -->
+            <div class="relative w-full h-auto hidden lg:block lg:w-4/12 bg-cover rounded-r-lg" style="background-image: url('./assets/images/materials/map.png')">
+              <span class="absolute top-[57%] left-[42%]">
+                <a href="https://goo.gl/maps/G3E3qH18Wm5yu3pe9" target="_blank"><i class="text-red-500 text-3xl fa-solid fa-location-dot"></i></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-0 right-0 hidden lg:flex w-[30%] h-full bg-blu bg-opacity-[52%] -z-10">
       </div>
     </section>
 
