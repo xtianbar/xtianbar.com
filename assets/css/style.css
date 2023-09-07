@@ -692,6 +692,18 @@ video {
   top: 57%;
 }
 
+.left-\[44\%\] {
+  left: 44%;
+}
+
+.left-\[44\.5\%\] {
+  left: 44.5%;
+}
+
+.top-\[56\%\] {
+  top: 56%;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -1509,6 +1521,22 @@ video {
 
 .underline-offset-2 {
   text-underline-offset: 2px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+.underline-offset-\[2rem\] {
+  text-underline-offset: 2rem;
+}
+
+.underline-offset-\[0\.5rem\] {
+  text-underline-offset: 0.5rem;
+}
+
+.underline-offset-\[0\.3rem\] {
+  text-underline-offset: 0.3rem;
 }
 
 .shadow-lg {
