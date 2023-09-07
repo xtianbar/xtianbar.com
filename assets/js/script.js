@@ -19,3 +19,17 @@ let calcScrollValue = () => {
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
+
+// FORM TO GOOGLE SHEETS
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwYONFhoXAPI8jNsF3Wdab2N8xWxTlIH8jGyVOhXC3GpQYVRvAbjanNCbTAvhYgZMlq/exec'
+const form = document.forms['talk-to-me']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      form.reset()
+      console.log('Success!', response)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
