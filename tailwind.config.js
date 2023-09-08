@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     colors: {
       'mostly-black': "#303030",
-      'blu': "#558AC8",
+      'blu': "#30578D",
       'gray-bg': "#F6F6F6",
-      'light-blu': "#68a1e3"
+      'light-blu': "#558AC8"
     },
     extend: {
       fontFamily: {
