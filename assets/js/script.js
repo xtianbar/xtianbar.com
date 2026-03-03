@@ -112,3 +112,52 @@ navLinks.forEach(link => {
     );
   });
 });
+
+
+// Select spans (Projects, About, Contact) AND the Nav Links
+const sections = document.querySelectorAll('span[id]'); 
+const navScrollLinks = document.querySelectorAll('.nav-link');
+
+function updateActiveLink() {
+  let current = '';
+  const scrollPosition = window.scrollY;
+
+  // 1. CHECK FOR HOME (Top of page)
+  // If we are very close to the top (less than 100px), force 'home'
+  if (scrollPosition < 100) {
+    current = 'home';
+  } 
+  // 2. CHECK FOR CONTACT (Bottom of page)
+  // If we have scrolled to the very bottom, force 'contact'
+  else if ((window.innerHeight + scrollPosition) >= document.body.offsetHeight - 50) {
+    current = 'contact'; 
+  } 
+  // 3. CHECK THE REST (Middle sections)
+  else {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      // We use a fixed offset (150px) instead of clientHeight
+      // because 'span' tags often have 0 height, which breaks the math.
+      if (scrollPosition >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
+      }
+    });
+  }
+
+  // Loop through links and apply styles
+  navScrollLinks.forEach(link => {
+    // Reset ALL links first
+    link.classList.remove('underline', 'underline-offset-[0.425rem]', 'decoration-blu', 'decoration-2', 'text-blu', 'font-bold');
+    link.classList.add('text-mostly-black'); 
+
+    // Add active style ONLY to the match
+    // We use .includes() because the href is usually "#home", but current is just "home"
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('underline', 'underline-offset-[0.425rem]', 'decoration-blu', 'decoration-2', 'text-blu', 'font-bold');
+      link.classList.remove('text-mostly-black');
+    }
+  });
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', updateActiveLink);
